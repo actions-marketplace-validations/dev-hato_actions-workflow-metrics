@@ -1,5 +1,6 @@
 import { describe, expect, it } from "bun:test";
 import { Renderer } from "./renderer";
+import { TimeLabelFormatter } from "./timeLabels";
 import type { z } from "zod";
 import type { legendsSchema } from "./lib";
 
@@ -491,5 +492,82 @@ describe("Renderer", () => {
     expect(result).toContain("<details>");
     expect(result).toContain("<summary>Chart</summary>");
     expect(result).toContain("</details>");
+  });
+
+  it("should limit visible time labels when times are long", () => {
+    const renderer: Renderer = new Renderer();
+    const startTime: number = Date.parse("2024-01-01T00:00:00Z");
+    const samples: number = 120;
+    const times: Date[] = Array.from(
+      { length: samples },
+      (_, index: number): Date => new Date(startTime + index * 1000),
+    );
+    const firstLabel: string = times[0].toLocaleTimeString("en-GB", {
+      hour12: false,
+    });
+    const lastLabel: string = times[times.length - 1].toLocaleTimeString(
+      "en-GB",
+      { hour12: false },
+    );
+
+    const result: string = renderer.render(
+      [
+        {
+          title: "Long Timeline",
+          legends: [{ color: "Gray", name: "Metric" }],
+          data: [
+            {
+              stepName: undefined,
+              stackedBarData: [
+                Array.from(
+                  { length: times.length },
+                  (_, index: number): number => index,
+                ),
+              ],
+              times,
+              yAxis: {
+                title: "Units",
+              },
+            },
+          ],
+        },
+      ],
+      testMetricsID,
+    );
+
+    const match: RegExpMatchArray | null = result.match(
+      /x-axis "Time" (\[[^\]]+\])/,
+    );
+    expect(match).not.toBeNull();
+    const labels: string[] = JSON.parse(match![1]);
+
+    const hasVisibleCharacters = (label: string): boolean =>
+      /[0-9:]/.test(label);
+
+    expect(labels.length).toBe(times.length);
+    expect(labels[0]).toBe(firstLabel);
+    expect(labels[labels.length - 1]).toBe(lastLabel);
+    const visibleIndices: number[] = labels
+      .map((label: string, index: number): number =>
+        hasVisibleCharacters(label) ? index : -1,
+      )
+      .filter((index: number): index is number => index >= 0);
+    expect(visibleIndices[0]).toBe(0);
+    expect(visibleIndices[visibleIndices.length - 1]).toBe(labels.length - 1);
+
+    const labelStep: number = TimeLabelFormatter.calculateLabelStep(
+      labels.length,
+    );
+    for (let i = 1; i < visibleIndices.length; i += 1) {
+      const current: number = visibleIndices[i];
+      const previous: number = visibleIndices[i - 1];
+      expect(current - previous).toBeGreaterThanOrEqual(labelStep);
+    }
+
+    const hiddenLabels: string[] = labels.filter(
+      (label: string): boolean => !hasVisibleCharacters(label),
+    );
+    expect(hiddenLabels.length).toBe(labels.length - visibleIndices.length);
+    expect(new Set(hiddenLabels).size).toBe(hiddenLabels.length);
   });
 });

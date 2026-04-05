@@ -8,6 +8,7 @@ import type {
   stackedBarDataSchema,
   timesSchema,
 } from "./lib";
+import { TimeLabelFormatter } from "./timeLabels";
 
 export class Renderer {
   render(
@@ -52,11 +53,7 @@ ${charts}`;
   }
 
   private formatTimes(times: z.TypeOf<typeof timesSchema>): string {
-    return JSON.stringify(
-      times.map((d: Date): string =>
-        d.toLocaleTimeString("en-GB", { hour12: false }),
-      ),
-    );
+    return JSON.stringify(TimeLabelFormatter.format(times));
   }
 
   private formatYAxisRange(range?: string): string {

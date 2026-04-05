@@ -119400,6 +119400,63 @@ function date4(params) {
 
 // node_modules/zod/v4/classic/external.js
 config(en_default());
+// src/post/timeLabels.ts
+var CHART_WIDTH_PX = 1161;
+var TICK_WIDTH_PX = 5;
+var LABEL_WIDTH_PX = 107;
+var REQUIRED_GAP_PX = LABEL_WIDTH_PX - TICK_WIDTH_PX;
+var ZERO_WIDTH_ZERO = "​";
+var ZERO_WIDTH_ONE = "‌";
+var ZERO_WIDTH_SENTINEL = "‍";
+
+class TimeLabelFormatter {
+  static calculateLabelStep(count) {
+    if (count <= 2) {
+      return 1;
+    }
+    const totalGapWidth = CHART_WIDTH_PX - TICK_WIDTH_PX * count;
+    if (totalGapWidth <= 0) {
+      return count;
+    }
+    const numerator = REQUIRED_GAP_PX * (count - 1);
+    return Math.max(1, Math.ceil(numerator / totalGapWidth));
+  }
+  static format(times) {
+    if (times.length === 0) {
+      return [];
+    }
+    const formattedTimes = times.map((d) => d.toLocaleTimeString("en-GB", { hour12: false }));
+    if (formattedTimes.length <= 2) {
+      return formattedTimes;
+    }
+    const labelStep = TimeLabelFormatter.calculateLabelStep(formattedTimes.length);
+    if (labelStep <= 1) {
+      return formattedTimes;
+    }
+    const lastIndex = formattedTimes.length - 1;
+    const totalInteriorPositions = Math.max(formattedTimes.length - 2, 0);
+    const estimatedInteriorLabels = Math.max(Math.floor(lastIndex / labelStep) - 1, 0);
+    const usableInteriorLabels = Math.min(totalInteriorPositions, estimatedInteriorLabels);
+    const visibleLabelIndices = new Set([0, lastIndex]);
+    if (usableInteriorLabels > 0) {
+      const spacing = totalInteriorPositions / (usableInteriorLabels + 1);
+      for (let slot = 1;slot <= usableInteriorLabels; slot += 1) {
+        const targetIndex = 1 + Math.round(slot * spacing);
+        let clamped = Math.min(lastIndex - 1, Math.max(1, targetIndex));
+        while (visibleLabelIndices.has(clamped) && clamped < lastIndex - 1) {
+          clamped += 1;
+        }
+        visibleLabelIndices.add(clamped);
+      }
+    }
+    return formattedTimes.map((label, index) => visibleLabelIndices.has(index) ? label : TimeLabelFormatter.encodeHiddenLabel(index));
+  }
+  static encodeHiddenLabel(index) {
+    const binary = index.toString(2);
+    return ZERO_WIDTH_SENTINEL + binary.split("").map((digit) => digit === "0" ? ZERO_WIDTH_ZERO : ZERO_WIDTH_ONE).join("");
+  }
+}
+
 // src/post/renderer.ts
 class Renderer {
   render(renderParamsList, metricsID) {
@@ -119428,7 +119485,7 @@ ${charts}`;
     return legends.map(({ color }) => color).join(", ");
   }
   formatTimes(times) {
-    return JSON.stringify(times.map((d) => d.toLocaleTimeString("en-GB", { hour12: false })));
+    return JSON.stringify(TimeLabelFormatter.format(times));
   }
   formatYAxisRange(range2) {
     return range2 ? ` ${range2}` : "";
@@ -119748,5 +119805,5 @@ async function index() {
 }
 await index();
 
-//# debugId=3087B091669722F964756E2164756E21
+//# debugId=BBEC8B87B2D9C02364756E2164756E21
 //# sourceMappingURL=index.bundle.js.map
