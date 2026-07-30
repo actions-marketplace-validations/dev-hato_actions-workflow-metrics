@@ -15,11 +15,13 @@ jobs:
     steps:
       - name: Generate a token
         id: generate_token
-        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         with:
-          app-id: ${{ secrets.PROJECT_AUTOMATION_APP_ID }}
-          private-key: ${{ secrets.PROJECT_AUTOMATION_PRIVATE_KEY }}
-      - uses: dev-hato/actions-add-to-projects@4f20d0bdaeabd4b7728bbea294e2c5264c082611 # v0.0.109
+          client-id: ${{ secrets.PROJECT_AUTOMATION_APP_CLIENT_ID }} # zizmor: ignore[secrets-outside-env]
+          private-key: ${{ secrets.PROJECT_AUTOMATION_PRIVATE_KEY }} # zizmor: ignore[secrets-outside-env]
+          permission-organization-projects: write
+          permission-pull-requests: read
+      - uses: dev-hato/actions-add-to-projects@19b69be5ecacae2d6f8f09bbec7b74f2257f7426 # v1.0.9
         with:
           github-token: ${{steps.generate_token.outputs.token}}
           project-url: https://github.com/orgs/dev-hato/projects/1

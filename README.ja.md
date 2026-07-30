@@ -11,6 +11,7 @@
 ## 機能
 
 - **システムメトリクス収集**: ワークフロー実行中のCPU負荷とメモリ使用量をリアルタイムで収集
+- **ステップ別メトリクス**: GitHub APIを使用してワークフローの各ステップごとにメトリクスを分割
 - **Mermaidチャート生成**: 収集したメトリクスをMermaid形式の積み上げ棒グラフとして可視化
 - **ジョブサマリー出力**: GitHub Actionsのジョブサマリーに自動的にチャートを表示
 
@@ -48,10 +49,15 @@ on: [push]
 jobs:
   example:
     runs-on: ubuntu-latest
+    permissions:
+      # private repositoryにおいては必須
+      actions: read
     steps:
       # ワークフローの先頭でactions-workflow-metricsを実行
       - name: Start Workflow Telemetry
         uses: dev-hato/actions-workflow-metrics@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # 以降の通常のステップ
       - name: Checkout
@@ -78,6 +84,7 @@ jobs:
   - `systeminformation`: システムメトリクス収集
   - `zod`: スキーマバリデーション
   - `@actions/core`: GitHub Actions連携
+  - `@octokit/action`: ステップ別メトリクス取得用GitHub APIクライアント
 
 ## 開発セットアップ
 

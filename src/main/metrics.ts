@@ -1,7 +1,7 @@
 import { setFailed } from "@actions/core";
 import { currentLoad, mem } from "systeminformation";
 import type { z } from "zod";
-import type { metricsDataSchema } from "../lib";
+import type { metricsDataSchema } from "../type";
 
 export class Metrics {
   private readonly data: z.TypeOf<typeof metricsDataSchema>;
@@ -51,7 +51,8 @@ export class Metrics {
         free: available / bytesPerMB,
       });
     } catch (error) {
-      setFailed(error);
+      console.error(error);
+      setFailed(error instanceof Error ? error : String(error));
     } finally {
       const nextUNIXTimeMs: number = unixTimeMs + this.intervalMs;
       setTimeout(
