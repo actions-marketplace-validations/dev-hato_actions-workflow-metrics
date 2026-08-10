@@ -78,7 +78,7 @@
 
     "@azure/storage-blob": ["@azure/storage-blob@12.33.0", "https://npm.flatt.tech/@azure/storage-blob/-/storage-blob-12.33.0.tgz", { "dependencies": { "@azure/abort-controller": "^2.1.2", "@azure/core-auth": "^1.9.0", "@azure/core-client": "^1.9.3", "@azure/core-http-compat": "^2.2.0", "@azure/core-lro": "^2.2.0", "@azure/core-paging": "^1.6.2", "@azure/core-rest-pipeline": "^1.19.1", "@azure/core-tracing": "^1.2.0", "@azure/core-util": "^1.11.0", "@azure/core-xml": "^1.4.5", "@azure/logger": "^1.1.4", "@azure/storage-common": "^12.4.1", "events": "^3.0.0", "tslib": "^2.8.1" } }, "sha512-2SX8oP8PyblUcAFZSg39c8Ls+tFjavM6sBeV+qpw33mRzRhI/5hrFJmJ/x0H9xx5l6ECPvgSP8uPxqTeVbHNIA=="],
 
-    "@azure/storage-common": ["@azure/storage-common@12.4.1", "https://npm.flatt.tech/@azure/storage-common/-/storage-common-12.4.1.tgz", { "dependencies": { "@azure/abort-controller": "^2.1.2", "@azure/core-auth": "^1.9.0", "@azure/core-http-compat": "^2.2.0", "@azure/core-rest-pipeline": "^1.24.0", "@azure/core-tracing": "^1.2.0", "@azure/core-util": "^1.11.0", "@azure/logger": "^1.1.4", "events": "^3.3.0", "tslib": "^2.8.1" } }, "sha512-t14unw/WofGDUi7TKJrsyXyPsN+NLgRm7hMaq0llxNmTIzt7f257+6LE6FKIJPh88zLj6M7LPvzve0fEYg/L3A=="],
+    "@azure/storage-common": ["@azure/storage-common@12.5.0", "https://npm.flatt.tech/@azure/storage-common/-/storage-common-12.5.0.tgz", { "dependencies": { "@azure/abort-controller": "^2.1.2", "@azure/core-auth": "^1.9.0", "@azure/core-http-compat": "^2.4.0", "@azure/core-rest-pipeline": "^1.24.0", "@azure/core-tracing": "^1.2.0", "@azure/core-util": "^1.11.0", "@azure/logger": "^1.1.4", "events": "^3.3.0", "tslib": "^2.8.1" } }, "sha512-bttzuhQiCIwrkzjPDA+AtAR7dg19L/CC6ztcqJ5LfvWpXuys9mHp0UQ0udYnoUvv9SCT9KTR5kqFvFr0e6k0lQ=="],
 
     "@babel/code-frame": ["@babel/code-frame@7.29.7", "https://npm.flatt.tech/@babel/code-frame/-/code-frame-7.29.7.tgz", { "dependencies": { "@babel/helper-validator-identifier": "^7.29.7", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw=="],
 
@@ -326,7 +326,7 @@
 
     "bare-stream": ["bare-stream@2.13.3", "https://npm.flatt.tech/bare-stream/-/bare-stream-2.13.3.tgz", { "dependencies": { "b4a": "^1.8.1", "streamx": "^2.25.0", "teex": "^1.0.1" }, "peerDependencies": { "bare-abort-controller": "*", "bare-buffer": "*", "bare-events": "*" }, "optionalPeers": ["bare-abort-controller", "bare-buffer", "bare-events"] }, "sha512-Kc+brLqvEqGkjyfiwJmImAOqLZL7OsoLKuavx+hJjgVV3nLTOjloJyPMFxjUPerGGHrNH0fLU06jjykMLWrERQ=="],
 
-    "bare-url": ["bare-url@2.4.7", "https://npm.flatt.tech/bare-url/-/bare-url-2.4.7.tgz", { "dependencies": { "bare-path": "^3.0.0" } }, "sha512-o8CRCiJtib+ycO3mE4A5UChtGX4dDP2XxsWVu9P+Zc3H8tcmKwNVEDoDTXmwN+uuMhfKeT7/i7Y26xS8W7ohoA=="],
+    "bare-url": ["bare-url@2.5.1", "https://npm.flatt.tech/bare-url/-/bare-url-2.5.1.tgz", { "dependencies": { "bare-path": "^3.0.0" } }, "sha512-cD5ciQuKlx+eumTCfqbfiL+fhQm+dHbVNB/cX4+d+I/nx4JsVop9VoFEPAs5RJ6I84QR6bZIBjpd2kjDOYeWcg=="],
 
     "base64-js": ["base64-js@1.5.1", "https://npm.flatt.tech/base64-js/-/base64-js-1.5.1.tgz", {}, "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA=="],
 
@@ -529,8 +529,6 @@
     "graceful-fs": ["graceful-fs@4.2.11", "https://npm.flatt.tech/graceful-fs/-/graceful-fs-4.2.11.tgz", {}, "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="],
 
     "has-bigints": ["has-bigints@1.1.0", "https://npm.flatt.tech/has-bigints/-/has-bigints-1.1.0.tgz", {}, "sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg=="],
-
-    "has-flag": ["has-flag@4.0.0", "https://npm.flatt.tech/has-flag/-/has-flag-4.0.0.tgz", {}, "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="],
 
     "has-property-descriptors": ["has-property-descriptors@1.0.2", "https://npm.flatt.tech/has-property-descriptors/-/has-property-descriptors-1.0.2.tgz", { "dependencies": { "es-define-property": "^1.0.0" } }, "sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg=="],
 
@@ -978,8 +976,6 @@
 
     "structured-source": ["structured-source@4.0.0", "https://npm.flatt.tech/structured-source/-/structured-source-4.0.0.tgz", { "dependencies": { "boundary": "^2.0.0" } }, "sha512-qGzRFNJDjFieQkl/sVOI2dUjHKRyL9dAJi2gCPGJLbJHBIkyOHxjuocpIEfbLioX+qSJpvbYdT49/YCdMznKxA=="],
 
-    "supports-color": ["supports-color@7.2.0", "https://npm.flatt.tech/supports-color/-/supports-color-7.2.0.tgz", { "dependencies": { "has-flag": "^4.0.0" } }, "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw=="],
-
     "systeminformation": ["systeminformation@5.33.1", "https://npm.flatt.tech/systeminformation/-/systeminformation-5.33.1.tgz", { "os": "!aix", "bin": { "systeminformation": "lib/cli.js" } }, "sha512-DEN6ICHk3Tk0Uf/hrAHh7xlt7iL5CJFBtPZinA0H62DrGG/KPKqq/Nzj6lCXPS4Ay/sf/14zNnk9LpqKzBIc+w=="],
 
     "table": ["table@6.9.0", "https://npm.flatt.tech/table/-/table-6.9.0.tgz", { "dependencies": { "ajv": "^8.0.1", "lodash.truncate": "^4.4.2", "slice-ansi": "^4.0.0", "string-width": "^4.2.3", "strip-ansi": "^6.0.1" } }, "sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A=="],
@@ -1010,7 +1006,7 @@
 
     "textlint-rule-ja-hiragana-keishikimeishi": ["textlint-rule-ja-hiragana-keishikimeishi@1.1.0", "https://npm.flatt.tech/textlint-rule-ja-hiragana-keishikimeishi/-/textlint-rule-ja-hiragana-keishikimeishi-1.1.0.tgz", { "dependencies": { "kuromojin": "^2.1.1", "morpheme-match-all": "^1.1.0" } }, "sha512-rNwTzQdwGopLxesjXMYQi1MVzZbQOx7fap7dAcbajtvMCKMtucYcvOIptgegagpHctaRa303NqbHLhqMv3OIeg=="],
 
-    "textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana": ["textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana/-/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-jeWjD7gwV1zzO/el0fHaLP5Hu9ihvCJp5yjisaKk5s4w7jgoDKcT0aqyP2HFZd99bOrFWea0GecCFvJt6/B8ew=="],
+    "textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana": ["textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana/-/textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-NbjhQd9c7vxGDgRzYKnxmVP1NAWrGmSoMe8pzQECEF44k36LmNNh96nbHPyPZSbiUs+TsO/b5t6KGnycn5MnYA=="],
 
     "textlint-rule-ja-no-abusage": ["textlint-rule-ja-no-abusage@3.0.0", "https://npm.flatt.tech/textlint-rule-ja-no-abusage/-/textlint-rule-ja-no-abusage-3.0.0.tgz", { "dependencies": { "kuromojin": "^3.0.0", "morpheme-match-textlint": "^2.0.6", "textlint-rule-prh": "^5.3.0" } }, "sha512-DIqPZgYTwTsvjX6Bgj7GA8vlwGMObagJpNoUtkucOaoy7E7GwUOL+knqFjcTtlkWSmoKpIkw5OWW5CV3kivlfQ=="],
 
@@ -1018,29 +1014,29 @@
 
     "textlint-rule-ja-no-redundant-expression": ["textlint-rule-ja-no-redundant-expression@4.0.1", "https://npm.flatt.tech/textlint-rule-ja-no-redundant-expression/-/textlint-rule-ja-no-redundant-expression-4.0.1.tgz", { "dependencies": { "@textlint/regexp-string-matcher": "^1.1.0", "kuromojin": "^3.0.0", "morpheme-match": "^2.0.4", "morpheme-match-all": "^2.0.5", "textlint-rule-helper": "^2.2.1", "textlint-util-to-string": "^3.1.1" } }, "sha512-r8Qe6S7u9N97wD0gcrASqBUdZs5CMEVlgc8Ul+D2NQFiOi1BoseOMo5I9yUsEZMAL46yh/eaw9+EWz6IDlPWeA=="],
 
-    "textlint-rule-ja-no-space-around-parentheses": ["textlint-rule-ja-no-space-around-parentheses@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-no-space-around-parentheses/-/textlint-rule-ja-no-space-around-parentheses-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-/G1MNHo65kIhFFD+2/0CIZ5HuKa+GXkpHkUr3EREa2HQP52rzP8L6cwYfl+gtlEKZ8iCQMfN0SbPulodALVErw=="],
+    "textlint-rule-ja-no-space-around-parentheses": ["textlint-rule-ja-no-space-around-parentheses@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-no-space-around-parentheses/-/textlint-rule-ja-no-space-around-parentheses-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-zH+tYMpOmjhdRbJ9OHoXSewmt7hHXTp+FF5ZfnARGzGJMzEXw+6kL1YjRoGkh8WHPvIrjOxaIh+H815eC4jZcw=="],
 
-    "textlint-rule-ja-no-space-around-slash": ["textlint-rule-ja-no-space-around-slash@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-no-space-around-slash/-/textlint-rule-ja-no-space-around-slash-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-OdgDIh1AXxv8idIsWI6pN8xwTal+1Zb4033XKqxq7sZ7clk3CNqC5p+BUORUNMA/KeloYUo6o1lSGWPePmD+GQ=="],
+    "textlint-rule-ja-no-space-around-slash": ["textlint-rule-ja-no-space-around-slash@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-no-space-around-slash/-/textlint-rule-ja-no-space-around-slash-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-J9rJsX1W740P5GARSM78gD3rOnGuuTw/dQBvkbXymWVa+oqag6Z1+w+yzqLIzBhEz30fVzqO/645f7mDZFI2gw=="],
 
-    "textlint-rule-ja-no-space-between-full-width": ["textlint-rule-ja-no-space-between-full-width@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-no-space-between-full-width/-/textlint-rule-ja-no-space-between-full-width-3.0.2.tgz", { "dependencies": { "regx": "^1.0.4", "textlint-rule-helper": "^2.2.4" } }, "sha512-fQ1z01IgrG4HCuZUZ2YZiOXdBA4hQE92gbe+SXXKGjOYD+99mVq0nmqdjjRY3HPSy7IAcqlefKdK9DQ32FH85A=="],
+    "textlint-rule-ja-no-space-between-full-width": ["textlint-rule-ja-no-space-between-full-width@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-no-space-between-full-width/-/textlint-rule-ja-no-space-between-full-width-3.0.3.tgz", { "dependencies": { "regx": "^1.0.4", "textlint-rule-helper": "^2.2.4" } }, "sha512-fOobxsjnVLG05TdtOCnCbK/iFIE3crlVDkJN+QtbuysPT45wE0g2t4NW/NHmzvtpy8wF2I6cuMEPuAssjuEkpw=="],
 
     "textlint-rule-ja-no-successive-word": ["textlint-rule-ja-no-successive-word@2.0.1", "https://npm.flatt.tech/textlint-rule-ja-no-successive-word/-/textlint-rule-ja-no-successive-word-2.0.1.tgz", { "dependencies": { "@textlint/regexp-string-matcher": "^1.1.0", "kuromojin": "^3.0.0" } }, "sha512-XKTXkHwMu86SnGaj73B67U4apDdTquDKF3SfG24tRbzMyJoGe/Iba5VMId8sp8QHeTonp1bYOSxjZsbkpGyCNw=="],
 
     "textlint-rule-ja-no-weak-phrase": ["textlint-rule-ja-no-weak-phrase@2.0.0", "https://npm.flatt.tech/textlint-rule-ja-no-weak-phrase/-/textlint-rule-ja-no-weak-phrase-2.0.0.tgz", { "dependencies": { "kuromojin": "^3.0.0", "morpheme-match": "^2.0.4", "morpheme-match-all": "^2.0.5" } }, "sha512-jZ1/3VnE8Bz/p0CCe/+BVOmWE1cZwpDkjKb6hnq39nGk3OD4XPW7biYavK/4/mZhk4bh2+Vtu1xV26lg8d+vBw=="],
 
-    "textlint-rule-ja-space-after-exclamation": ["textlint-rule-ja-space-after-exclamation@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-after-exclamation/-/textlint-rule-ja-space-after-exclamation-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-EiKXAD43vNVR7sWlCP1+QvMJQYSDpwxXodLOFHKWEYnUJACTm/54YBb8943oMhDbdWXPOVaBzU6XtX5lmBkIrw=="],
+    "textlint-rule-ja-space-after-exclamation": ["textlint-rule-ja-space-after-exclamation@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-after-exclamation/-/textlint-rule-ja-space-after-exclamation-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-Xs2q9Nj1391/MGbdBlRBDl/j4IMdpoOtELQKCkqftLKLZ4UDbbj4IESqsgnzGJTD2E/kMhd/Zs7CR18/Qtvc/w=="],
 
-    "textlint-rule-ja-space-after-question": ["textlint-rule-ja-space-after-question@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-after-question/-/textlint-rule-ja-space-after-question-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-t3aTXVX1ma/3V8E6G2mwkrHoLfu/3bTV4l6p6yySfOdb2wNiahmD08Cy71sD20CHzHxk57Ocx2OXFKKJx+9s2A=="],
+    "textlint-rule-ja-space-after-question": ["textlint-rule-ja-space-after-question@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-after-question/-/textlint-rule-ja-space-after-question-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-8mTq6L38myS5z2STTSX29GqvNwNlVRqStKcqL0cFsMT8Nf4eMU4zhqMHXDjr4yJBljzBTbIqE80WVW3r2abXiA=="],
 
-    "textlint-rule-ja-space-around-code": ["textlint-rule-ja-space-around-code@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-n9q9IBRie6ck3Bkapj+XMUT+lDD8lx0jH7YjIrDTzNRdIE76COF3NycMyhZm/o1i7tyQMggGarCmNaK1xcUKWg=="],
+    "textlint-rule-ja-space-around-code": ["textlint-rule-ja-space-around-code@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-around-code/-/textlint-rule-ja-space-around-code-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-4MpPYuMoABeG/FLujjJ8+xldErMhjnmW9qWoOX8Dbblk3gWnzAW/yFYSLD2ofybpntzYCHWVLIY33Q4OrusffA=="],
 
-    "textlint-rule-ja-space-around-emphasis": ["textlint-rule-ja-space-around-emphasis@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-around-emphasis/-/textlint-rule-ja-space-around-emphasis-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-Oxut/HrzeamAaCw9Ll1vnYTi5YOKfWwL+dgnVeRKkJkDGIvpPgIer510HaovNHHAv2d3FzEkW3PxPKva4N3WUA=="],
+    "textlint-rule-ja-space-around-emphasis": ["textlint-rule-ja-space-around-emphasis@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-around-emphasis/-/textlint-rule-ja-space-around-emphasis-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-IPKVeHY7//MR9Nif1PJgiSyQsQRJ27OP0bFMGi2W0rBtyaorT6FdbX/qIkgNgEpjqbARD2CcaCfbouhVXqdD2w=="],
 
-    "textlint-rule-ja-space-around-link": ["textlint-rule-ja-space-around-link@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-around-link/-/textlint-rule-ja-space-around-link-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-lh+7girFo0gt706/0bT3Yyf+QHdAnyaC8ybidbDN+NlDfkFi31qPdiFPrdTlQXwD9FfZelwBGAHVFAz22eoG4g=="],
+    "textlint-rule-ja-space-around-link": ["textlint-rule-ja-space-around-link@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-around-link/-/textlint-rule-ja-space-around-link-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-zNqRbu37idDDVOY227kKQtQDT7gyf/upBo0/wRbygLuBHYoU9H56Igxy0X+5isRTJd4FM21myb+pA+ZBqfizaA=="],
 
-    "textlint-rule-ja-space-around-strong": ["textlint-rule-ja-space-around-strong@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-around-strong/-/textlint-rule-ja-space-around-strong-3.0.2.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-uKxjaikPv8BuznFS7kPu8eqPGtOTiSpKw2+P8vf+bNbN2FzJq4RHXDjhhj2R5rUmIPPFgAcurDHPZ/A1WE66HQ=="],
+    "textlint-rule-ja-space-around-strong": ["textlint-rule-ja-space-around-strong@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-around-strong/-/textlint-rule-ja-space-around-strong-3.0.3.tgz", { "dependencies": { "textlint-rule-helper": "^2.2.4" } }, "sha512-0kOQl1qjHakyGXgVlvOIgLsU40GDgxajm+Q0oFm1RoWSopS+fF0Cfcod9BDL3AjKQYs8kJvD9v4wcgE9izVvgg=="],
 
-    "textlint-rule-ja-space-between-half-and-full-width": ["textlint-rule-ja-space-between-half-and-full-width@3.0.2", "https://npm.flatt.tech/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-3.0.2.tgz", { "dependencies": { "@textlint/regexp-string-matcher": "^2.0.2", "textlint-rule-helper": "^2.2.4" } }, "sha512-wdX0fCy7K7IBfxcflnEbkgx0j4mNQ7XRPGP7DFMHxJhqigZBkbrV/+uu2UwoBMxHd5CDJrPdxllrcrfNZoe4Ew=="],
+    "textlint-rule-ja-space-between-half-and-full-width": ["textlint-rule-ja-space-between-half-and-full-width@3.0.3", "https://npm.flatt.tech/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-3.0.3.tgz", { "dependencies": { "@textlint/regexp-string-matcher": "^2.0.2", "textlint-rule-helper": "^2.2.4" } }, "sha512-mcVsMEKfAj4HLIoxEydHJpC4mFIG1BiU5WhVtnA9N8DZKj5HxywZcHXCSGAVL724cWg66ccAFfBy4g9hBKdOUg=="],
 
     "textlint-rule-ja-unnatural-alphabet": ["textlint-rule-ja-unnatural-alphabet@2.0.1", "https://npm.flatt.tech/textlint-rule-ja-unnatural-alphabet/-/textlint-rule-ja-unnatural-alphabet-2.0.1.tgz", { "dependencies": { "@textlint/regexp-string-matcher": "^1.0.2", "match-index": "^1.0.1", "regx": "^1.0.4" } }, "sha512-n93V8qh6OKdh8OB6yLT+9Xl8DSoZ7gWi51tWdhlLEPIWgBm18nLMgm6Ck+nVc3eENOdRcQURWUpCGotI8wTemA=="],
 
@@ -1252,11 +1248,7 @@
 
     "@textlint/types/@textlint/ast-node-types": ["@textlint/ast-node-types@4.4.3", "https://npm.flatt.tech/@textlint/ast-node-types/-/ast-node-types-4.4.3.tgz", {}, "sha512-qi2jjgO6Tn3KNPGnm6B7p6QTEPvY95NFsIAaJuwbulur8iJUEenp1OnoUfiDaC/g2WPPEFkcfXpmnu8XEMFo2A=="],
 
-    "@types/glob/@types/node": ["@types/node@26.1.1", "https://npm.flatt.tech/@types/node/-/node-26.1.1.tgz", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw=="],
-
     "archiver-utils/glob": ["glob@10.5.0", "https://npm.flatt.tech/glob/-/glob-10.5.0.tgz", { "dependencies": { "foreground-child": "^3.1.0", "jackspeak": "^3.1.2", "minimatch": "^9.0.4", "minipass": "^7.1.2", "package-json-from-dist": "^1.0.0", "path-scurry": "^1.11.1" }, "bin": { "glob": "dist/esm/bin.mjs" } }, "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg=="],
-
-    "bun-types/@types/node": ["@types/node@26.1.1", "https://npm.flatt.tech/@types/node/-/node-26.1.1.tgz", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw=="],
 
     "check-ends-with-period/emoji-regex": ["emoji-regex@10.6.0", "https://npm.flatt.tech/emoji-regex/-/emoji-regex-10.6.0.tgz", {}, "sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A=="],
 
@@ -1293,8 +1285,6 @@
     "textlint/@textlint/types": ["@textlint/types@15.8.0", "https://npm.flatt.tech/@textlint/types/-/types-15.8.0.tgz", { "dependencies": { "@textlint/ast-node-types": "15.8.0" } }, "sha512-Anhc6y5736YIsvqae0U6k0YmB2M/QVHkEeOv2aydAn/WIkdI69dCOiDbe3/+RagS3qstFTSFWJzNRA2lUjv19w=="],
 
     "textlint-rule-general-novel-style-ja/textlint-rule-helper": ["textlint-rule-helper@1.2.0", "https://npm.flatt.tech/textlint-rule-helper/-/textlint-rule-helper-1.2.0.tgz", { "dependencies": { "unist-util-visit": "^1.1.0" } }, "sha512-yJmVbmyuUPOndKsxOijpx/G7mwybXXf4M10U2up0BeIZSN+6drUl+aSKAoC+RUHY7bG4ogLwRcmWoNG1lSrRIQ=="],
-
-    "textlint-rule-helper/@textlint/ast-node-types": ["@textlint/ast-node-types@15.7.1", "https://npm.flatt.tech/@textlint/ast-node-types/-/ast-node-types-15.7.1.tgz", {}, "sha512-Wii5UgUKFEh9Uv6wbq1zr4/Kf+dtjiUuzPrrXzKp8H+ifkvKNzi23V4Nz+6wVyHQn5T28AFuc8VH8OtzvGYecA=="],
 
     "textlint-rule-ja-hiragana-fukushi/kuromojin": ["kuromojin@2.1.1", "https://npm.flatt.tech/kuromojin/-/kuromojin-2.1.1.tgz", { "dependencies": { "kuromoji": "0.1.1" } }, "sha512-bd5dfE9CdRBoRPiquE5uhzBrDOn2K3WuFeOWqZgM7DNtQhvS7P9IALy5MtDxXcnw7DLBAZ1A7DByPO5BhXdgew=="],
 
